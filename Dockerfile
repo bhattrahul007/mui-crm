@@ -1,4 +1,5 @@
 ###### Build #####
+# docker file for project 
 FROM node:18-alphine AS node
 WORKDIR /
 COPY . .
