@@ -7,7 +7,7 @@ import {
 } from "../store/types";
 import { Entity } from "../types";
 
-// Login actions
+// Authentication actions
 
 export function signIn(result?: TODO) {
   return {
