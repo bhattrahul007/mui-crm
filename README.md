@@ -9,8 +9,8 @@
 - Use Formik to manage the form submission
 - Integrate with storybook for react.
 - The project is built on TypeScript 3.x
-- ~~Use Formsy to manage form submission~~
-- ~~To simulate real-world business, this starter project chooses Json-Server as fake Restful API. (You can simple replace it with your own API)~~
+- Use Formsy to manage form submission~
+- To simulate real-world business, this starter project chooses Json-Server as fake Restful API. (You can simple replace it with your own API)
 
 ### Screenshots
 
