@@ -1,5 +1,6 @@
 /* eslint-disable */
 // api for interacting with json-server
+// to interact our app
 import { DB } from "./demo-db";
 
 import { Entity } from "../types";
