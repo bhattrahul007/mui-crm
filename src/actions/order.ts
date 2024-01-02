@@ -11,45 +11,45 @@ import {
   LIST_CATEGORY,
   LIST_PRODUCT,
   EDIT_ORDER,
-  QActions
+  QActions,
 } from "../store/types";
 import { Entity } from "../types";
 
+// order actions
 
 export function listOrder(result?: TODO) {
   return {
     type: LIST_ORDER,
-    payload: result
-  }
+    payload: result,
+  };
 }
 
 export function getOrder(result?: TODO) {
   return {
     type: GET_ORDER,
-    payload: result
-  }
+    payload: result,
+  };
 }
 
 export function createOrder(result?: TODO) {
   return {
     type: CREATE_ORDER,
-    payload: result
-  }
+    payload: result,
+  };
 }
 
 export function updateOrder(result?: TODO) {
   return {
     type: UPDATE_ORDER,
-    payload: result
-  }
+    payload: result,
+  };
 }
 
 export function deleteOrder(id) {
-
   return {
     type: DELETE_ORDER,
-    payload: id
-  }
+    payload: id,
+  };
 }
 
 export function newOrder(result?: TODO) {
@@ -66,22 +66,25 @@ export function editOrder(result?: TODO) {
   };
 }
 
-export function getAction(action: OrderActions,
-  id = 0, data?: Entity, query?: string): ApiAction | QActions {
-
+export function getAction(
+  action: OrderActions,
+  id = 0,
+  data?: Entity,
+  query?: string
+): ApiAction | QActions {
   switch (action) {
     case NEW_ORDER:
       return {
         type: NEW_ORDER,
-        endpoint: 'orders/',
+        endpoint: "orders/",
         method: HttpMethod.GET,
-      }
+      };
     case GET_ORDER:
       return {
         type: GET_ORDER,
-        endpoint: 'orders/' + id + "?_expand=customer",
+        endpoint: "orders/" + id + "?_expand=customer",
         method: HttpMethod.GET,
-      }
+      };
     case EDIT_ORDER:
       const actions = {
         order: {
@@ -111,28 +114,26 @@ export function getAction(action: OrderActions,
         type: LIST_ORDER,
         endpoint: `orders?_expand=customer&${query}`,
         method: HttpMethod.GET,
-      }
+      };
     case UPDATE_ORDER:
       return {
         type: UPDATE_ORDER,
-        endpoint: 'orders/',
+        endpoint: "orders/",
         method: HttpMethod.PUT,
-        data
-      }
+        data,
+      };
     case CREATE_ORDER:
       return {
         type: CREATE_ORDER,
-        endpoint: 'orders/',
+        endpoint: "orders/",
         method: HttpMethod.POST,
-        data
-      }
+        data,
+      };
     case DELETE_ORDER:
       return {
         type: DELETE_ORDER,
-        endpoint: 'orders/' + id,
+        endpoint: "orders/" + id,
         method: HttpMethod.DELETE,
-
-      }
+      };
   }
-
 }
