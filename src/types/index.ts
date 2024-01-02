@@ -1,4 +1,3 @@
-// @ts-ignore
 export interface Entity {
   id: number;
   text?: string;
@@ -9,12 +8,6 @@ export interface Category extends Entity {
   name: string;
   parentId: string;
 }
-
-// export interface UserInfo extends Entity {
-//   messages: string[];
-//   notifications: string[];
-//   tasks: string[];
-// }
 
 export interface User extends Entity {
   firstname: string;
@@ -62,7 +55,7 @@ export interface Product extends Entity {
   avatar?: string;
 }
 
-export type ViewModel = Customer | Order | Product | Category  
+export type ViewModel = Customer | Order | Product | Category;
 
 // export type SearchFilter = {
 //   equals?: TODO;
@@ -78,18 +71,17 @@ export type ViewModel = Customer | Order | Product | Category
 // };
 
 export type SearchFilter = {
-  equal?: TODO,
-  contain?: TODO,
-  startsWith?: TODO,
-  endsWith?: TODO,
-  lessThan?: TODO,
-  greaterThan?: TODO,
-  lessThanOrEqual?: TODO,
-  greaterThanOrEqual?: TODO,
+  equal?: TODO;
+  contain?: TODO;
+  startsWith?: TODO;
+  endsWith?: TODO;
+  lessThan?: TODO;
+  greaterThan?: TODO;
+  lessThanOrEqual?: TODO;
+  greaterThanOrEqual?: TODO;
   // between?: TODO,
-  filters?: TODO
-
-}
+  filters?: TODO;
+};
 
 export class CustomerModel implements Customer {
   constructor(
@@ -164,10 +156,10 @@ export class OrderModel implements Order {
 export class ProductModel implements Product {
   constructor(
     name: string = "",
-    categoryId =  "" as string,
+    categoryId = "" as string,
     numInStock: number = 0,
     unitPrice: number = 0,
-    category = {} as Category,
+    category = {} as Category
   ) {
     this.id = 0;
     this.name = name;
@@ -175,7 +167,6 @@ export class ProductModel implements Product {
     this.numInStock = numInStock;
     this.unitPrice = unitPrice;
     this.category = category;
-  
   }
   id: number;
   name: string;
@@ -183,5 +174,4 @@ export class ProductModel implements Product {
   numInStock: number;
   unitPrice: number;
   category: Category;
-
 }
