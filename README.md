@@ -20,14 +20,6 @@
 
 ![Screenshot3](screenshots/screenshot-3.1.jpg)
 
-<!-- ![Screenshot4](screenshots/screenshot-4.jpg) -->
-
----
-
-Storybook
-
-![Screenshot4](screenshots/screenshot-6.jpg)
-
 ## Build Setup
 
 ```bash
