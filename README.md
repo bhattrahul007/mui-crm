@@ -12,13 +12,6 @@
 - Use Formsy to manage form submission~
 - To simulate real-world business, this starter project chooses Json-Server as fake Restful API. (You can simple replace it with your own API)
 
-### Screenshots
-
-![Screenshot1](screenshots/screenshot-1.jpg)
-
-![Screenshot2](screenshots/screenshot-1.1.jpg)
-
-![Screenshot3](screenshots/screenshot-3.1.jpg)
 
 ## Build Setup
 
